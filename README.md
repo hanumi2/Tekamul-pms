@@ -200,9 +200,6 @@ The mock API simulates the following endpoints:
 - Safari (latest)
 - Edge (latest)
 
-## License
-
-MIT
 
 ## Support
 
