@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { useAuth } from "../context/AuthContext"
 import { RoleGuard } from "./RoleGuard"
 import { ROLES } from "../models/mockData"
+import { getDashboardPath } from "../utils/roleHelpers"
 
 // Public views
 import LandingPage from "../views/Landing"
@@ -55,12 +56,15 @@ export default function AppRoutes() {
       <Route path="/" element={<LandingPage />} />
       <Route
         path="/login"
-        element={isAuthenticated ? <Navigate to={`/${user?.role.toLowerCase()}/dashboard`} /> : <LoginPage />}
+        element={isAuthenticated ? <Navigate to={getDashboardPath(user?.role)} /> : <LoginPage />}
       />
-      <Route path="/register" element={<RegisterPage />} />
+      <Route
+        path="/register"
+        element={isAuthenticated ? <Navigate to={getDashboardPath(user?.role)} /> : <RegisterPage />}
+      />
       <Route path="/admin/login" element={<Navigate to="/login" />} />
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
-      <Route path="*" element={<NotFoundPage />} />
+
 
       {/* Admin routes */}
       <Route
@@ -265,6 +269,7 @@ export default function AppRoutes() {
           </RoleGuard>
         }
       />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )
 }

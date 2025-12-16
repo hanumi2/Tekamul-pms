@@ -28,7 +28,7 @@ export default function Login() {
       const result = await mockApi.login(email, password, selectedRole)
       login(result.user, result.token)
       toast.success("Logged in successfully!")
-      navigate(`/${result.user.role.toLowerCase()}/dashboard`)
+      navigate(getDashboardPath(result.user.role))
     } catch (error) {
       toast.error(error.message || "Login failed")
     } finally {
