@@ -57,8 +57,8 @@ export const mockUsers = [
 export const mockProjects = [
   {
     id: "1",
-    name: "Website Redesign",
-    description: "Complete redesign of company website",
+    name: "Commercial Building Design – Addis Ababa",
+    description: "Architectural and engineering design for a multi-storey commercial building, including government approval submissions.",
     status: "in_progress",
     progress: 65,
     startDate: "2024-01-15",
@@ -72,8 +72,8 @@ export const mockProjects = [
   },
   {
     id: "2",
-    name: "Mobile App Development",
-    description: "Native iOS app for client",
+    name: "Residential Housing Complex Design",
+    description: "Integrated architectural, structural, and electrical design for a residential housing project.",
     status: "planning",
     progress: 25,
     startDate: "2024-02-01",
@@ -86,13 +86,12 @@ export const mockProjects = [
     messenger: null,
   },
 ]
-
 export const mockTasks = [
   {
     id: "1",
     projectId: "1",
-    title: "Design homepage layout",
-    description: "Create wireframes and mockups for homepage",
+    title: "Prepare architectural concept drawings",
+    description: "Develop initial architectural sketches and space planning based on client requirements.",
     status: "completed",
     priority: "high",
     assignedTo: "3",
@@ -102,8 +101,8 @@ export const mockTasks = [
   {
     id: "2",
     projectId: "1",
-    title: "Implement responsive design",
-    description: "Make design responsive for mobile devices",
+    title: "Develop detailed structural drawings",
+    description: "Produce reinforced concrete structural drawings and calculations.",
     status: "in_progress",
     priority: "high",
     assignedTo: "3",
@@ -113,8 +112,8 @@ export const mockTasks = [
   {
     id: "3",
     projectId: "1",
-    title: "Setup backend API",
-    description: "Create RESTful API endpoints",
+    title: "Submit drawings for government approval",
+    description: "Prepare and submit required documents to regulatory authorities for approval.",
     status: "backlog",
     priority: "medium",
     assignedTo: "3",
@@ -124,8 +123,8 @@ export const mockTasks = [
   {
     id: "4",
     projectId: "2",
-    title: "App architecture planning",
-    description: "Define app structure and technology stack",
+    title: "Client requirement analysis",
+    description: "Conduct meetings with the client to gather design and functional requirements.",
     status: "in_progress",
     priority: "high",
     assignedTo: "3",
@@ -135,8 +134,8 @@ export const mockTasks = [
   {
     id: "5",
     projectId: "2",
-    title: "UI component library",
-    description: "Build reusable UI components",
+    title: "Prepare preliminary design proposal",
+    description: "Create initial architectural and engineering design proposal for client review.",
     status: "backlog",
     priority: "medium",
     assignedTo: "3",
@@ -145,31 +144,32 @@ export const mockTasks = [
   },
 ]
 
+
+
 export const mockDesigns = [
   {
     id: "1",
     projectId: "1",
-    name: "Homepage Design v1.0",
+    name: "Architectural & Structural Drawings – Revision Set",
     uploadedBy: "2",
     uploadedAt: "2024-02-10",
-    file: "homepage-v1.0.zip",
+    file: "commercial-building-drawings-v1.zip",
     versions: [
-      { version: "1.0", uploadedAt: "2024-02-10", fileName: "homepage-v1.0.zip" },
-      { version: "1.1", uploadedAt: "2024-02-15", fileName: "homepage-v1.1.zip" },
-      { version: "2.0", uploadedAt: "2024-02-20", fileName: "homepage-v2.0.zip" },
+      { version: "1.0", uploadedAt: "2024-02-10", fileName: "drawings-v1.0.zip" },
+      { version: "1.1", uploadedAt: "2024-02-15", fileName: "drawings-v1.1.zip" },
+      { version: "2.0", uploadedAt: "2024-02-20", fileName: "drawings-v2.0.zip" },
     ],
     status: "approved",
     feedback: [],
   },
 ]
-
 export const mockMessages = [
   {
     id: "1",
     projectId: "1",
     userId: "2",
     userName: "Project Manager",
-    message: "Design looks great! Let's proceed with implementation.",
+    message: "The architectural drawings have been approved. Please proceed with structural detailing.",
     timestamp: "2024-02-20T10:30:00",
   },
   {
@@ -177,7 +177,7 @@ export const mockMessages = [
     projectId: "1",
     userId: "3",
     userName: "Senior Engineer",
-    message: "Starting frontend development next week",
+    message: "Structural calculations are underway and will be submitted for review this week.",
     timestamp: "2024-02-20T11:45:00",
   },
   {
@@ -185,16 +185,18 @@ export const mockMessages = [
     projectId: "1",
     userId: "5",
     userName: "Client User",
-    message: "Excited to see the progress!",
+    message: "Thank you for the update. Looking forward to the next design submission.",
     timestamp: "2024-02-20T14:20:00",
   },
 ]
 
 export const mockSatisfactionRatings = [
-  { id: "1", projectId: "1", rating: 5, comment: "Excellent work!" },
-  { id: "2", projectId: "1", rating: 4, comment: "Good quality" },
-  { id: "3", projectId: "2", rating: 5, comment: "Perfect!" },
+  { id: "1", projectId: "1", rating: 5, comment: "Excellent coordination and clear design documentation." },
+  { id: "2", projectId: "1", rating: 4, comment: "Very good service and timely updates." },
+  { id: "3", projectId: "2", rating: 5, comment: "Professional and well-organized consulting team." },
 ]
+
+
 
 export const mockReports = {
   satisfaction: {
